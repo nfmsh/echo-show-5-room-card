@@ -69,19 +69,20 @@ Put the Companion App into fullscreen for true edge-to-edge.
 
 Configuration
 Basic Options
-Key	Type	Default	Description
-title	string	"Room"	Header title text
-background_image	string	""	Background image URL (e.g. /local/images/room.jpg)
-overlay_opacity	number	0.7	Dark overlay strength (0..1)
-env_temp_entity	string	""	Temperature entity (also used by badge thresholds)
-env_humidity_entity	string	""	Humidity entity (also used by badge thresholds)
-title_color	string	""	CSS colour for title (blank = theme)
-title_size_px	number	26	Title font size
-subtitle_color	string	""	CSS colour for subtitle (blank = theme)
-subtitle_size_px	number	20	Subtitle font size
-big_icon	string	"mdi:home"	Main icon
-big_icon_color	string	"teal"	Main icon colour (also drives halo + default button icon colour)
-big_icon_size	number	200	Main icon size in px
+| Key                   | Type   |      Default | Description                                                      |
+| --------------------- | ------ | -----------: | ---------------------------------------------------------------- |
+| `title`               | string |     `"Room"` | Header title text                                                |
+| `background_image`    | string |         `""` | Background image URL (e.g. `/local/images/room.jpg`)             |
+| `overlay_opacity`     | number |        `0.7` | Dark overlay strength (0..1)                                     |
+| `env_temp_entity`     | string |         `""` | Temperature entity (also used by badge thresholds)               |
+| `env_humidity_entity` | string |         `""` | Humidity entity (also used by badge thresholds)                  |
+| `title_color`         | string |         `""` | CSS colour for title (blank = theme)                             |
+| `title_size_px`       | number |         `26` | Title font size                                                  |
+| `subtitle_color`      | string |         `""` | CSS colour for subtitle (blank = theme)                          |
+| `subtitle_size_px`    | number |         `20` | Subtitle font size                                               |
+| `big_icon`            | string | `"mdi:home"` | Main icon                                                        |
+| `big_icon_color`      | string |     `"teal"` | Main icon colour (also drives halo + default button icon colour) |
+| `big_icon_size`       | number |        `200` | Main icon size in px                                             |
 
 Badge
 The badge is fixed-position (not configurable by design). It can be disabled or driven by temp/humidity thresholds.
@@ -150,17 +151,21 @@ buttons:
     entity: input_boolean.motion_bypass
 ```
 Button Fields
-Key	Type	Description
-label	string	Button label text
-icon	string	MDI icon name (mdi:...)
-icon_color	string	Icon colour (blank uses big_icon_color)
-text_color	string	Label text colour (optional)
-disabled	boolean	Disable button tap (optional)
-entity	string	Optional entity for toggle / more-info
-tap.action	string	none | toggle | more-info | call-service | navigate
-tap.service	string	Service for call-service (e.g. script.some_action)
-tap.data	object	Optional service data object
-tap.navigation_path	string	Path for navigate
+| Key                   | Type    | Description                                                   |
+| --------------------- | ------- | ------------------------------------------------------------- |
+| `label`               | string  | Button label text                                             |
+| `icon`                | string  | MDI icon name (`mdi:...`)                                     |
+| `icon_color`          | string  | Icon colour (blank uses `big_icon_color`)                     |
+| `text_color`          | string  | Label text colour (optional)                                  |
+| `disabled`            | boolean | Disable button tap (optional)                                 |
+| `entity`              | string  | Optional entity for toggle / more-info                        |
+| `tap.action`          | string  | `none` | `toggle` | `more-info` | `call-service` | `navigate` |
+| `tap.service`         | string  | Service for `call-service` (e.g. `script.some_action`)        |
+| `tap.data`            | object  | Optional service data object                                  |
+| `tap.navigation_path` | string  | Path for `navigate`                                           |
+
+
+
 
 Refreshing on Echo Show / Companion App
 The Companion App (and some WebViews) can be aggressive about caching frontend JS.
