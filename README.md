@@ -26,6 +26,17 @@ It renders a fixed **960×480** “stage” and scales it to **cover** the avail
 
 ---
 
+### Optional (Echo Show / wall display setup)
+
+This card does not require any other integrations to function.
+
+However, I use **Browser Mod** in my setup :
+- Set kiosk mode to "TRUE"
+- Set Hide header to "TRUE"
+
+If you want the same kiosk-style presentation on an Echo Show , installing Browser Mod is recommended.
+Due to the small nature of the screen on these devices i did this so there's more space for the card.
+
 ## Installation (HACS)
 
 1. Add this repository to HACS as a **Frontend** custom repository (if required).
