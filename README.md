@@ -193,6 +193,15 @@ Your card YAML config
 
 Screenshots (Echo Show + desktop editor if relevant)
 
+---
+
+## Inspiration / Credit
+
+This card was inspired by the Room Cards concept by Aguacate:
+https://aguacatec.es/room-cards/
+
+---
+
 License
 MIT
 
