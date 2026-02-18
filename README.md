@@ -4,6 +4,7 @@
 [![GitHub Release](https://img.shields.io/github/v/release/nfmsh/echo-show-5-room-card)](https://github.com/nfmsh/echo-show-5-room-card/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Activity](https://img.shields.io/github/last-commit/nfmsh/echo-show-5-room-card)](https://github.com/nfmsh/echo-show-5-room-card/commits/main)
+[![Community Forum](https://img.shields.io/badge/community-forum-brightgreen)](https://community.home-assistant.io/t/release-echo-show-5-room-card/988169)
 
 A Home Assistant Lovelace custom card designed specifically for **Echo Show 5** style wall/tablet displays.
 
