@@ -39,6 +39,14 @@ Due to the small nature of the screen on these devices i did this so there's mor
 
 ---
 
+## Demo / Screenshots
+
+Echo Show 5 Room Card
+
+![Echo Show 5 Room Card](/docs/screenshots/echoshow5roomcard.png)
+
+---
+
 ## Installation
 
 Installation via HACS (recommended)
