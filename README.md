@@ -37,19 +37,65 @@ However, I use **Browser Mod** in my setup :
 If you want the same kiosk-style presentation on an Echo Show , installing Browser Mod is recommended.
 Due to the small nature of the screen on these devices i did this so there's more space for the card.
 
-## Installation (HACS)
+---
 
-1. Add this repository to HACS as a **Frontend** custom repository (if required).
-2. Install **Echo Show 5 Room Card**.
-3. In Home Assistant go to:
-   - **Settings → Dashboards → Resources**
-   - Add:
-     - **URL:** `/hacsfiles/echo-show-5-room-card/echo-show-5-room-card.js`
-     - **Type:** `JavaScript Module`
-4. Reload the page / restart the Companion App as needed.
+## Installation
 
-> Tip: During development, add a version query string to bust cache:  
-> `/hacsfiles/echo-show-5-room-card/echo-show-5-room-card.js?v=0.1.0`
+Installation via HACS (recommended)
+
+This card is available through HACS.
+
+Steps:
+
+- Open HACS in Home Assistant
+
+- Go to Frontend
+
+- Click Explore & Download Repositories
+
+- Search for Echo Show 5 Room card
+
+- Select the card and click Download
+
+- Reload the frontend
+
+- Add the card to your dashboard
+
+That’s it. No manual file copying required.
+
+After installation
+
+HACS automatically registers the card resources.
+You can now add the card from the Lovelace UI:
+
+- Edit your dashboard
+
+- Add Card
+
+- Search for Echo Show 5 Room Card
+
+- Configure using the built-in editor UI
+
+### Manual
+
+1. Copy the files from this repo's `dist/` folder into Home Assistant:
+
+```
+/config/www/echo-show-5-room-card/
+  ├─ echo-show-5-room-card.js
+  
+```
+
+2. Add both as **JavaScript Module** resources:
+
+**Settings → Dashboards → Resources → Add Resource**
+
+```
+/local/echo-show-5-room-card/echo-show-5-room-card.js
+
+```
+
+3. Refresh your browser (hard refresh if needed).
 
 ---
 
@@ -76,9 +122,9 @@ views:
 
 Put the Companion App into fullscreen for true edge-to-edge.
 
+---
 
-
-Configuration
+## Configuration Options
 Basic Options
 | Key                   | Type   |      Default | Description                                                      |
 | --------------------- | ------ | -----------: | ---------------------------------------------------------------- |
@@ -95,7 +141,9 @@ Basic Options
 | `big_icon_color`      | string |     `"teal"` | Main icon colour (also drives halo + default button icon colour) |
 | `big_icon_size`       | number |        `200` | Main icon size in px                                             |
 
-Badge
+---
+
+## Badge
 The badge is fixed-position (not configurable by design). It can be disabled or driven by temp/humidity thresholds.
 
 ```yaml
@@ -116,7 +164,7 @@ Badge icon changes based on thresholds and stays white
 
 Badge circle colour changes based on the matching rule
 
-Center Control
+## Center Control
 Option A: Preset + Entity (recommended)
 ```yaml
 Copy code
@@ -138,7 +186,9 @@ center_card:
 Note: When using center_card, the card will render as you specify.
 The host card still forces transparent background and can hide more-info dots (if enabled).
 
-Buttons (Up to 8)
+---
+
+## Buttons (Up to 8)
 Buttons are arranged in a fixed grid 2 columns × 4 rows and remain stable even if you configure fewer than 8.
 
 Example:
@@ -161,7 +211,7 @@ buttons:
       action: toggle
     entity: input_boolean.motion_bypass
 ```
-Button Fields
+## Button Fields
 | Key                   | Type    | Description                                                   |
 | --------------------- | ------- | ------------------------------------------------------------- |
 | `label`               | string  | Button label text                                             |
@@ -175,25 +225,11 @@ Button Fields
 | `tap.data`            | object  | Optional service data object                                  |
 | `tap.navigation_path` | string  | Path for `navigate`                                           |
 
+---
 
 
 
-Refreshing on Echo Show / Companion App
-The Companion App (and some WebViews) can be aggressive about caching frontend JS.
-
-If updates don’t appear:
-
-Add a version query string to the resource URL:
-
-/hacsfiles/echo-show-5-room-card/echo-show-5-room-card.js?v=0.1.1
-
-Or fully close/reopen the app
-
-Or clear the app cache
-
-If using Browser Mod, calling a refresh against that browser can force reload
-
-Support / Issues
+## Support / Issues
 Please include:
 
 Your Home Assistant version
