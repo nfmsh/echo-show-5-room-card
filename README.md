@@ -1,5 +1,10 @@
 # Echo Show 5 Room Card
 
+[![HACS](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/default)
+[![GitHub Release](https://img.shields.io/github/v/release/nfmsh/echo-show-5-room-card)](https://github.com/nfmsh/echo-show-5-room-card/releases)
+[![License](https://img.shields.io/github/license/nfmsh/echo-show-5-room-card)](LICENSE)
+[![GitHub Activity](https://img.shields.io/github/last-commit/nfmsh/echo-show-5-room-card)](https://github.com/nfmsh/echo-show-5-room-card/commits/main)
+
 A Home Assistant Lovelace custom card designed specifically for **Echo Show 5** style wall/tablet displays.
 
 It renders a fixed **960×480** “stage” and scales it to **cover** the available space. The card is intended to be used as a **panel view** (single-card display), which makes sizing consistent and avoids dashboard layout quirks.
